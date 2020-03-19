@@ -37,5 +37,19 @@ public class ChickenStoreFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        adapter = new ChickenStoreAdapter(getActivity(), R.layout.chicken_store_list_item, chickenStoreList);
+
+        binding.chickenListView.setAdapter(adapter);
+
+        chickenStoreList.add(new ChickenStore("굽네치킨"));
+        chickenStoreList.add(new ChickenStore("네네치킨"));
+        chickenStoreList.add(new ChickenStore("BBQ"));
+        chickenStoreList.add(new ChickenStore("호식이두마리치킨"));
+        chickenStoreList.add(new ChickenStore("처갓집치킨"));
+        chickenStoreList.add(new ChickenStore("호치킨"));
+        chickenStoreList.add(new ChickenStore("맛닭꼬"));
+
+        adapter.notifyDataSetChanged();
     }
 }

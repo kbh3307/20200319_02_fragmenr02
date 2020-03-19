@@ -8,6 +8,8 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
+
+
        <androidx.viewpager.widget.ViewPager
            android:id="@+id/mainViewPager"
            android:layout_width="match_parent"
