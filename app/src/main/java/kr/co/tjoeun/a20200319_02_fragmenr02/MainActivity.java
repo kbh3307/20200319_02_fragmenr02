@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
+import kr.co.tjoeun.a20200319_02_fragmenr02.adapters.MainViewPagerAdapter;
 import kr.co.tjoeun.a20200319_02_fragmenr02.databinding.ActivityMainBinding;
 
 // 프로젝트 기본 세팅
@@ -12,6 +13,7 @@ import kr.co.tjoeun.a20200319_02_fragmenr02.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivity {
 
+    MainViewPagerAdapter mvpa;
     ActivityMainBinding binding = null;
 
     @Override
@@ -29,6 +31,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+        mvpa = new MainViewPagerAdapter(getSupportFragmentManager());
 
+        binding.mainViewPager.setAdapter(mvpa);
     }
 }
